@@ -1,0 +1,138 @@
+/* Custom Colors */
+:root {
+  /* bright orange */
+  --primary-300: hsl(31, 77%, 52%);
+  /* dark cyan */
+  --primary-500: hsl(184, 100%, 22%);
+  /* very dark cyan */
+  --primary-700: hsl(179, 100%, 13%);
+  /* transparent white (paragraphs) */
+  --neutral-200: hsla(0, 0%, 100%, 0.75);
+  /* very light gray (backgrounds, headings, buttons) */
+  --neutral-400: hsl(0, 0%, 95%);
+}
+
+body {
+  /* Typography */
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--neutral-200);
+  /* design widths */
+  min-width: 375px;
+  max-width: 1440px;
+  /* centering and padding */
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Typography */
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+}
+
+/* utility classes */
+.flex-container {
+  display: flex;
+  /* default to column for mobile first design */
+  flex-direction: column;
+  max-width: 900px;
+  /* margin: 0 auto; */
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.btn {
+  border-radius: 2rem;
+  background: var(--neutral-400);
+  width: 8rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--neutral-400);
+}
+
+/* layout - mobile */
+section {
+  display: grid;
+  gap: 2rem;
+  padding: 2.75rem;
+}
+
+/* Custom styles */
+section h2 {
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+/* card backgrounds & button colors */
+.sedan {
+  background: var(--primary-300);
+}
+
+.sedan a {
+  color: var(--primary-300);
+}
+
+.suv {
+  background: var(--primary-500);
+}
+
+.suv a {
+  color: var(--primary-500);
+}
+
+.luxury {
+  background: var(--primary-700);
+}
+
+.luxury a {
+  color: var(--primary-700);
+}
+
+/* hover states */
+.btn:hover {
+  background: transparent;
+  color: inherit;
+}
+
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--primary-700);
+}
+
+.attribution a {
+  color: var(--primary-300);
+}
+
+
+/* Desktop view */
+@media (min-width: 720px) {
+
+  /* vertically and horizontally center */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  section p {
+    padding-bottom: 3rem;
+  }
+}
