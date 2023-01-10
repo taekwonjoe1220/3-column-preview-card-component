@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/taekwonjoe1220/3-column-preview-card-component)
+- Live Site URL: [Netlify](https://preeminent-beignet-4206f0.netlify.app/)
 
 ## My process
 
