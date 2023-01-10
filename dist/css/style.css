@@ -13,15 +13,9 @@
 }
 
 body {
-  /* Typography */
   font-size: 15px;
   font-family: 'Lexend Deca', sans-serif;
   color: var(--neutral-200);
-  /* design widths */
-  min-width: 375px;
-  max-width: 1440px;
-  /* centering and padding */
-  margin: 0 auto;
   padding: 2rem;
 }
 
@@ -42,11 +36,8 @@ h6 {
   /* default to column for mobile first design */
   flex-direction: column;
   max-width: 900px;
-  /* margin: 0 auto; */
-}
-
-.card {
-  border-radius: 10px;
+  /* horizontal centering on the page, couldn't quite get horizontal centering to work on larger vertical pixel layouts without using flexbox or grid (but then content gets cutoff on smaller screens */
+  margin: auto;
 }
 
 .btn {
@@ -57,6 +48,7 @@ h6 {
   text-align: center;
   text-decoration: none;
   border: 1px solid var(--neutral-400);
+  vertical-align: middle;
 }
 
 /* layout - mobile */
@@ -76,6 +68,9 @@ section h2 {
 /* card backgrounds & button colors */
 .sedan {
   background: var(--primary-300);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
 }
 
 .sedan a {
@@ -92,6 +87,8 @@ section h2 {
 
 .luxury {
   background: var(--primary-700);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .luxury a {
@@ -119,12 +116,20 @@ section h2 {
 /* Desktop view */
 @media (min-width: 720px) {
 
-  /* vertically and horizontally center */
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .luxury,
+  .sedan {
+    /* reset borders */
+    border-radius: 0;
+  }
+
+  .luxury {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .sedan {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .flex-container {
